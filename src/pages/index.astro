@@ -1,81 +1,91 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="FinEdge">
+	<header>
+		<nav
+		class="flex items-center justify-between flex-wrap bg-[#B3AEAB] p-6 font-semibold text-[#000000]"
+		>
+		  <a href="#">Home</a>
+		  <a href="#about-us">About Us</a>
+		  <a href="#services">Services</a>
+		  <a href="#contact-us">Contact Us</a>
+		</nav>
+	  </header>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section id="home">
+			<h1
+			>FinEdge</h1>
+			<p>A cutting-edge fintech startup focused on transforming cross-border payments.</p>
+		  </section>
+		  <section id="about-us">
+			<h2>About Us</h2>
+			<p>We believe in a world where geographic boundaries should not limit individuals and businesses from making seamless transactions.</p>
+			<p>We offer a variety of financial services that make it easy to send and receive money across borders, including:</p>
+			<ul>
+			  <li>Individual money transfers</li>
+			  <li>Business payments</li>
+			  <li>Real-time tracking of payments</li>
+			</ul>
+		  </section>
+		  <section id="services">
+			<h2>Services</h2>
+			<div class="service">
+			  <img src="" alt="Money Transfer">
+			  <h3>Money Transfer</h3>
+			  <p>Send and receive money to friends and family in over 100 countries.</p>
+			</div>
+			<div class="service">
+			  <img src="" alt="Business Payments">
+			  <h3>Business Payments</h3>
+			  <p>Make and receive payments from businesses all over the world.</p>
+			</div>
+			<div class="service">
+			  <img src="" alt="Payment Tracking">
+			  <h3>Payment Tracking</h3>
+			  <p>Track your payments in real time and see where they are in the process.</p>
+			</div>
+		  </section>
+		  <section id="contact-us">
+			<h2>Contact Us</h2>
+			<form>
+			  <input type="text" name="name" placeholder="Your Name">
+			  <input type="email" name="email" placeholder="Your Email">
+			  <textarea name="message" placeholder="Your Message"></textarea>
+			  <input type="submit" value="Send">
+			</form>
+		  </section>
+		  <footer>
+			<p>Copyright &copy; 2023 FinEdge</p>
+		  </footer>
 	</main>
 </Layout>
 
 <style>
+
+	a {
+		color: #000000;
+		text-decoration: none;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 1.2rem;
+	}
 	main {
-		margin: auto;
+		margin: ;
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	section {
+		margin: 3rem 0;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	section h1 {
+		font-size: 5rem;
+		margin-bottom: 1rem;
+		font-family: 'Poppins', sans-serif;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	
 </style>
